@@ -2,152 +2,107 @@
 
 ![Preview](screenshot/example.png)
 
-Bem-vindo ao **Torneio do Dilema do Prisioneiro**! Este projeto simula interações entre estratégias clássicas do dilema do prisioneiro em um ambiente competitivo, revelando como cooperação, traição e adaptação influenciam resultados em cenários repetidos. Ideal para entusiastas de teoria dos jogos, educação e análise estratégica.
-
----
+Bem-vindo ao **Torneio do Dilema do Prisioneiro**! Este projeto é uma simulação divertida e interativa que implementa diversas estratégias clássicas do dilema do prisioneiro, permitindo observar como cada uma se comporta em rodadas de confronto direto.
 
 ## Contexto e Objetivos
 
-O **dilema do prisioneiro** é um paradoxo fundamental na teoria dos jogos que explora o conflito entre interesse individual e benefício coletivo. Desenvolvido por Albert W. Tucker nos anos 1950, ganhou relevância com os torneios de Robert Axelrod nos anos 1980, onde estratégias como **"Tit For Tat"** se destacaram por equilibrar reciprocidade e simplicidade.
+O dilema do prisioneiro é um conceito fundamental na teoria dos jogos, ilustrando a tensão entre cooperação e competição em situações onde as decisões individuais afetam o resultado coletivo. Este projeto foi desenvolvido com os seguintes propósitos:
 
-### Objetivos do Projeto:
-- **Simular Interações Estratégicas**: Modelar confrontos entre algoritmos com diferentes filosofias (cooperação, traição, adaptação).
-- **Educação em Teoria dos Jogos**: Demonstrar conceitos como equilíbrio de Nash, cooperação emergente e evolução de estratégias.
-- **Análise Quantitativa**: Comparar desempenho de estratégias através de pontuações acumuladas e visualização gráfica.
-- **Aplicações Práticas**: Inspirar soluções em áreas como economia, biologia evolutiva e design de algoritmos colaborativos.
+- **Educar**: Servir como uma ferramenta didática para explicar conceitos de teoria dos jogos, mostrando na prática como diferentes estratégias podem resultar em vantagens ou desvantagens para os participantes.
+- **Explorar Estratégias**: Permitir a análise comparativa de comportamentos em cenários de interação repetida, evidenciando os efeitos da cooperação, traição e retaliação.
+- **Aplicar Conceitos Teóricos**: Demonstrar, através da simulação, como teorias econômicas, sociais e biológicas podem ser aplicadas para entender e prever comportamentos em sistemas complexos.
 
-### Público-Alvo:
-- Estudantes e professores de ciências sociais, economia e computação.
-- Pesquisadores interessados em simulações de sistemas complexos.
-- Desenvolvedores que buscam implementar lógicas de tomada de decisão em IA.
+Além disso, o projeto se destaca como uma aplicação prática em áreas como economia, biologia evolutiva, sociologia e ciência da computação, onde os princípios do dilema do prisioneiro são utilizados para modelar e interpretar interações estratégicas.
 
----
+### Público-Alvo
 
-## Estratégias Implementadas
+Este projeto é voltado para estudantes, pesquisadores e entusiastas de teoria dos jogos, inteligência artificial e ciências sociais. Também pode ser útil para professores que desejam demonstrar conceitos de estratégia e comportamento colaborativo de forma prática e interativa.
 
-Cada estratégia encapsula um comportamento único, refletindo filosofias distintas de interação:
+## Descrição
 
-| Estratégia          | Comportamento                          | Categoria   | Exemplo Histórico/Prático                |
-|----------------------|----------------------------------------|-------------|------------------------------------------|
-| **Tit For Tat**      | Começa cooperando, imita última jogada | Good Guy    | Vencedor do torneio de Axelrod (1980)    |
-| **Always Cooperate** | Sempre coopera                         | Good Guy    | Alianças diplomáticas estáveis           |
-| **Tit For Two Tats** | Só retalia após 2 traições seguidas    | Good Guy    | Negociações com margem para erro         |
-| **Always Defect**    | Sempre trai                            | Bad Guy     | Monopólios agressivos                    |
-| **Grudger**          | Perdoa até a primeira traição          | Bad Guy     | Sistemas de justiça com "três strikes"   |
-| **Random**           | Escolhas aleatórias                    | Neutro      | Táticas de diversão em jogos online      |
-| **Adaptive**         | Ajusta tática baseada em histórico     | Adaptativo  | Algoritmos de mercado financeiro         |
+Nesta simulação, diferentes estratégias enfrentam-se em partidas com um número aleatório de rodadas (entre 50 e 200). Cada estratégia decide sua ação (cooperar ou trair) com base na última jogada do oponente. Ao fim do torneio, as pontuações são agregadas e um ranking final é exibido, tanto no terminal quanto em um gráfico de barras.
 
-**Categorias**:
-- **Good Guys**: Estratégias que priorizam cooperação inicial e reciprocidade.
-- **Bad Guys**: Estratégias agressivas ou com retaliação irreversível.
-- **Neutros/Adaptativos**: Comportamentos imprevisíveis ou dinâmicos.
+O conceito do dilema do prisioneiro foi formulado por Albert W. Tucker nos anos 1950, mas as simulações e torneios modernos de estratégias, como o realizado por Robert Axelrod em 1980, popularizaram essas ideias. Axelrod realizou um torneio com diferentes estratégias, com "Tit For Tat" sendo a vencedora devido à sua simplicidade e eficácia em contextos cooperativos.
 
----
+### Estratégias Implementadas
 
-## Regras e Dinâmica do Torneio
+- **Tit For Tat**: Inicia cooperando e replica o último movimento do oponente.  
+- Exemplo histórico: Essa estratégia foi vencedora no famoso torneio de Robert Axelrod nos anos 80, demonstrando a eficácia da reciprocidade.
+- **Always Cooperate**: Sempre coopera.
+- Exemplo prático: Um grupo de indivíduos que sempre colabora pode se sair bem contra si mesmo, mas é vulnerável contra traidores.
+- **Always Defect**: Sempre trai.
+- Exemplo prático: Estratégias agressivas podem ser vistas em competições empresariais onde empresas sempre exploram seus concorrentes sem buscar cooperação.
+- **Random**: Escolhe aleatoriamente entre trair ou cooperar.
+- Exemplo prático: Em ambientes instáveis, algumas entidades podem agir de forma aleatória para confundir adversários.
+- **Grudger**: Coopera até ser traído; após a traição, passa a trair para sempre.
+- Exemplo histórico: Em sociedades tribais, a retaliação definitiva era uma forma de manter alianças e evitar traições.
+- **Tit For Two Tats**: Coopera até que o oponente traia duas vezes seguidas, passando a trair somente após essa sequência.
+- Exemplo prático: Estratégias mais tolerantes como essa podem ser vistas em negociações diplomáticas onde uma traição isolada pode ser ignorada, mas ações repetidas levam a retaliações.
+- **Adaptive**: Analisa padrões de jogadas e ajusta sua estratégia ao longo do jogo.
+- Exemplo prático: Inteligências artificiais que aprendem padrões de comportamento e se ajustam conforme o contexto.
 
-### Sistema de Pontuação
-Os jogadores acumulam pontos por rodada conforme a matriz clássica:
+As estratégias são categorizadas em dois grupos:
+    - **Good Guys**: "Tit For Tat", "Always Cooperate" e "Tit For Two Tats".
+    - **Bad Guys**: "Always Defect" e "Grudger".
 
-| Ação Jogador 1 | Ação Jogador 2 | Pontos (J1, J2) | Cenário Equivalente           |
-|----------------|----------------|-----------------|-------------------------------|
-| Cooperar       | Cooperar       | (3, 3)          | Cooperação mútua              |
-| Cooperar       | Trair          | (0, 5)          | "Sucker's Payoff" vs. traição |
-| Trair          | Cooperar       | (5, 0)          | Exploração bem-sucedida       |
-| Trair          | Trair          | (1, 1)          | Guerra desgastante            |
+### Regras de Pontuação
 
-**Lógica da Pontuação**:
-- **Recompensa por cooperação mútua (3,3)**: Incentivo à colaboração, mas com ganho menor que a exploração.
-- **Tentação de trair (5,0)**: Benefício imediato, mas risco de retaliação futura.
-- **Punição por traição mútua (1,1)**: Prejuízo garantido em conflitos contínuos.
-- **"Sucker's Payoff" (0,5)**: Penalização por confiar em parceiros oportunistas.
+Os pontos são atribuídos a cada rodada conforme a seguinte tabela:
 
-### Estrutura do Torneio
-1. **Combates em Round Robin**: Cada estratégia enfrenta todas as outras.
-2. **Rodadas Dinâmicas**: Número de rodadas por confronto varia entre 50 e 200 (evita previsibilidade).
-3. **Ranking Final**: Pontos totais determinam a classificação, exibida em terminal e gráfico.
+| Jogadas                        | Pontuação (Jogador 1, Jogador 2) |
+| ------------------------------ | -------------------------------- |
+| **Ambos cooperam**             | (3, 3)                           |
+| **Um coopera e o outro trai**  | (0, 5) ou (5, 0)                 |
+| **Ambos traem**                | (1, 1)                           |
 
----
+#### Justificativa da Pontuação
+
+Os valores da tabela seguem a estrutura clássica do dilema do prisioneiro, onde:
+
+- **Cooperação mútua (3,3)**: Ambos se beneficiam, mas menos do que se um deles traísse.
+- **Traição unilateral (0,5) ou (5,0)**: O traidor ganha mais pontos às custas do cooperador, incentivando a exploração.
+- **Traição mútua (1,1)**: Ambos perdem, demonstrando que a falta de cooperação pode ser prejudicial para todos.
+
+Essa configuração reflete o dilema fundamental: embora a melhor escolha coletiva seja a cooperação, o incentivo individual à traição pode levar a um resultado subótimo para todos.
+
+## Como Funciona
+
+Exemplo de Simulação
+
+Para ilustrar melhor a dinâmica do torneio, considere a seguinte simulação:
+
+- **Rodada 1**: "Tit For Tat" enfrenta "Always Defect".
+  - "Tit For Tat" começa cooperando, mas "Always Defect" trai.
+    - Pontuação: "Tit For Tat" (0), "Always Defect" (5).
+- **Rodada 2**: "Tit For Tat" agora trai em resposta, e "Always Defect" continua traindo.
+  - Pontuação: "Tit For Tat" (1), "Always Defect" (1).
+    - O jogo continua até o final das rodadas, com as pontuações acumuladas e o ranking final exibido.
 
 ## Como Executar
 
-### Pré-requisitos
-- Python 3.8+
-- Bibliotecas: `matplotlib`, `numpy`
+ Execute o script principal:
 
 ```bash
-pip install -r requirements.txt
+python von.py
 ```
 
-### Executando o Torneio
-```python
-from torneio import Torneio, TitForTat, AlwaysDefect, Grudger
+Isso iniciará a simulação e exibirá os resultados no terminal e no gráfico gerado automaticamente.
 
-# Configure suas estratégias
-estrategias = [
-    TitForTat(nome="TitForTat (Agressivo)"),
-    AlwaysDefect(),
-    Grudger(),
-]
+## Pré-requisitos
 
-# Inicie o torneio com 100 rodadas (fixas) para debug
-torneio = Torneio(estrategias, rodadas_min=100, rodadas_max=100)
-torneio.executar()
-torneio.exibir_resultados()
+- **Python 3.x**
+- **Bibliotecas**:
+- `matplotlib`
+- `numpy`
+
+Você pode instalá-las utilizando o `pip`:
+
+```bash
+pip install matplotlib numpy
 ```
-
-**Saída Esperada**:
-```
-Ranking Final:
-1. Adaptive: 1200 pontos
-2. Tit For Tat: 1150 pontos
-3. Grudger: 900 pontos
-...
-Gráfico salvo em 'resultados.png'
-```
-
-### Personalização Avançada
-- **Adicione Novas Estratégias**: Herde da classe `Estrategia` e implemente `decidir()`.
-- **Ajuste Parâmetros**: Modifique o intervalo de rodadas, penalidades ou recompensas.
-- **Simulações em Massa**: Use `multi_torneio.py` para executar múltiplos torneios e analisar consistência.
-
----
-
-## Análises e Insights
-
-### Resultados Típicos
-- **"Tit For Tat"** frequentemente lidera em ambientes mistos, equilibrando cooperação e defesa.
-- **"Always Defect"** domina em torneios curtos, mas falha em cenários prolongados devido a retaliações.
-- **Estratégias Adaptativas** performam bem contra oponentes diversificados, mas podem sucumbir a padrões caóticos (ex: Random).
-
-### Lições Aplicáveis
-1. **Reciprocidade é Sustentável**: Cooperação inicial com retaliação justa maximiza ganhos a longo prazo.
-2. **Ambiente Influencia Comportamento**: Torneios com mais rodadas favorecem cooperadores.
-3. **Diversidade Estratégica**: Sistemas com múltiplas táticas evitam domínio de um único comportamento.
-
----
-
-## Contribuição e Expansão
-
-Este projeto é open-source! Contribuições são bem-vindas:
-
-1. **Novas Estratégias**: Implemente "Forgiving Tit For Tat", "Pavlov" ou "Testador".
-2. **Recursos de Visualização**: Adicione gráficos de tendência, heatmaps de interação ou análise estatística.
-3. **Otimização**: Melhore o desempenho para simulações com milhares de estratégias.
-
-```python
-class NovaEstrategia(Estrategia):
-    def decidir(self, rodada, historico):
-        # Lógica personalizada aqui
-        return ACAO.COOPERAR if rodada % 2 == 0 else ACAO.TRAIR
-```
-
----
 
 ## Referências e Leitura Adicional
 
 - Axelrod, R. (1984). *The Evolution of Cooperation*. Basic Books.
 - Wikipedia: [Dilema do Prisioneiro](https://pt.wikipedia.org/wiki/Dilema_do_prisioneiro)
 - Stanford Encyclopedia of Philosophy: [Game Theory](https://plato.stanford.edu/entries/game-theory/)
-
-**Licença**: MIT. Use, modifique e compartilhe livremente.
